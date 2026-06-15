@@ -1,0 +1,161 @@
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #1a1a1a;
+  --accent: #6c63ff;
+  --accent-hover: #5a52d5;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --border: #2a2a2a;
+}
+
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  color: var(--accent) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent) !important;
+}
+
+/* ===== BUTTONS ===== */
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+  color: white;
+}
+
+.btn-outline-accent {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.section-title span {
+  color: var(--accent);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+/* ===== CARDS ===== */
+.card-dark {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-dark:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+}
