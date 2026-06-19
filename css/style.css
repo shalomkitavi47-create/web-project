@@ -159,3 +159,67 @@ footer a {
     padding: 50px 0;
   }
 }
+/* =========================================================
+   LIGHT MODE OVERRIDE
+   Toggled via body.light-mode (set by js/main.js)
+   ========================================================= */
+body.light-mode {
+  --bg-primary: #f8f8fb;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --accent: #6c63ff;
+  --accent-hover: #5a52d5;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --border: #e0e0e5;
+}
+
+body.light-mode .card-dark {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .hero {
+  background: linear-gradient(135deg, #f8f8fb 0%, #eceaff 100%);
+}
+
+/* =========================================================
+   FORM STATUS / VALIDATION (used on contact.html)
+   ========================================================= */
+.is-invalid {
+  border-color: #ff5c5c !important;
+}
+
+.invalid-feedback {
+  display: none;
+  color: #ff5c5c;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.form-control-dark {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+}
+
+.form-control-dark:focus {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+  outline: none;
+}
+
+.form-control-dark::placeholder {
+  color: var(--text-secondary);
+}
+
+.d-none {
+  display: none !important;
+}
