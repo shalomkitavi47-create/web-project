@@ -223,3 +223,8 @@ body.light-mode .hero {
 .d-none {
   display: none !important;
 }
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
