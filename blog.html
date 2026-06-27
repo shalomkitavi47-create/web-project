@@ -87,10 +87,6 @@
       align-items: center;
       gap: 0.4rem;
       transition: gap 0.2s;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
     }
 
     .read-more:hover {
@@ -167,144 +163,6 @@
       padding: 3rem 0;
       color: var(--text-secondary);
     }
-
-    /* ===== ARTICLE MODAL ===== */
-    .article-modal .modal-content {
-      background-color: #12121f;
-      border: 1px solid rgba(108, 99, 255, 0.3);
-      border-radius: 12px;
-      color: #e0e0e0;
-    }
-
-    .article-modal .modal-header {
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 1.75rem 2rem 1.25rem;
-    }
-
-    .article-modal .modal-body {
-      padding: 1.75rem 2rem 2rem;
-    }
-
-    .article-modal .modal-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.35;
-    }
-
-    .article-modal .btn-close {
-      filter: invert(1) grayscale(1);
-      opacity: 0.6;
-    }
-
-    .article-modal .btn-close:hover {
-      opacity: 1;
-    }
-
-    /* Article content typography */
-    .article-content h3 {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-top: 2rem;
-      margin-bottom: 0.65rem;
-    }
-
-    .article-content h3:first-child {
-      margin-top: 0.25rem;
-    }
-
-    .article-content p {
-      color: #b0b0c8;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-
-    .article-content ul,
-    .article-content ol {
-      color: #b0b0c8;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      padding-left: 1.4rem;
-      margin-bottom: 1.1rem;
-    }
-
-    .article-content li {
-      margin-bottom: 0.35rem;
-    }
-
-    .article-content code {
-      background: rgba(108, 99, 255, 0.15);
-      color: #a78bfa;
-      border-radius: 4px;
-      padding: 0.1em 0.4em;
-      font-size: 0.88em;
-      font-family: 'Fira Code', 'Courier New', monospace;
-    }
-
-    .article-content pre {
-      background: #0d0d1a;
-      border: 1px solid rgba(108, 99, 255, 0.25);
-      border-radius: 8px;
-      padding: 1.1rem 1.3rem;
-      margin: 1.2rem 0;
-      overflow-x: auto;
-    }
-
-    .article-content pre code {
-      background: none;
-      padding: 0;
-      font-size: 0.85rem;
-      color: #c4b5fd;
-      line-height: 1.7;
-    }
-
-    .article-content .callout {
-      background: rgba(108, 99, 255, 0.1);
-      border-left: 3px solid #6c63ff;
-      border-radius: 0 6px 6px 0;
-      padding: 0.9rem 1.2rem;
-      margin: 1.2rem 0;
-      color: #c4b5fd;
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
-
-    .article-content .callout strong {
-      color: #a78bfa;
-    }
-
-    .article-meta-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
-    .article-meta-bar span {
-      font-size: 0.82rem;
-      color: #888;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .article-meta-bar span i {
-      color: #6c63ff;
-    }
-
-    .article-content .section-divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin: 1.75rem 0;
-    }
-
-    .article-content strong {
-      color: #d0d0e8;
-    }
   </style>
 </head>
 <body>
@@ -326,7 +184,7 @@
           <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-2">
-            <button class="btn btn-sm btn-outline-secondary" id="themeToggle" aria-label="Toggle dark/light mode"></button>
+            <button class="btn btn-sm btn-outline-secondary" id="themeToggle">
               <i class="fas fa-moon"></i>
             </button>
           </li>
@@ -393,9 +251,7 @@
               through five common API design mistakes I see repeatedly in Nairobi-based startups, and the
               specific fixes that make your API honest, predictable, and a pleasure to consume.
             </p>
-            <button class="read-more" data-bs-toggle="modal" data-bs-target="#modalFeatured">
-              Read full article <i class="fas fa-arrow-right"></i>
-            </button>
+            <a href="#" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -426,9 +282,7 @@
                 works on every page without a flash of the wrong theme on load — a bug I see on 80% of
                 portfolio sites I review.
               </p>
-              <button class="read-more" data-bs-toggle="modal" data-bs-target="#modalDarkMode">
-                Read more <i class="fas fa-arrow-right"></i>
-              </button>
+              <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -450,9 +304,7 @@
                 I spent three months talking to developers across Nairobi, Mombasa, and Kisumu about what
                 they're building, what stacks they're choosing, and where they're struggling.
               </p>
-              <button class="read-more" data-bs-toggle="modal" data-bs-target="#modalKenya">
-                Read more <i class="fas fa-arrow-right"></i>
-              </button>
+              <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -474,9 +326,7 @@
                 relational tables, ignoring indexes until performance collapsed, and writing N+1 queries
                 without realising it. Each one comes with the fix I wish someone had told me earlier.
               </p>
-              <button class="read-more" data-bs-toggle="modal" data-bs-target="#modalPostgres">
-                Read more <i class="fas fa-arrow-right"></i>
-              </button>
+              <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -498,9 +348,7 @@
                 was it worth it? The honest answer is: it depends entirely on what you do with it. Here's
                 what the degree taught me that YouTube never could — and what it completely failed to cover.
               </p>
-              <button class="read-more" data-bs-toggle="modal" data-bs-target="#modalDegree">
-                Read more <i class="fas fa-arrow-right"></i>
-              </button>
+              <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -526,401 +374,12 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
-<footer>
-  <div class="container">
-    <div class="row align-items-center gy-3">
-      <div class="col-md-4 text-center text-md-start">
-        <a href="index.html" style="color: var(--accent); font-weight: 700; font-size: 1.1rem; text-decoration: none;">&lt;AlexMorgan /&gt;</a>
-        <p class="mb-0 mt-1" style="font-size: 0.82rem;">Full-Stack Developer · Nairobi, Kenya</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="d-flex justify-content-center gap-3">
-          <a href="index.html" style="color: var(--text-secondary); font-size: 0.85rem;">Home</a>
-          <a href="about.html" style="color: var(--text-secondary); font-size: 0.85rem;">About</a>
-          <a href="services.html" style="color: var(--text-secondary); font-size: 0.85rem;">Services</a>
-          <a href="contact.html" style="color: var(--text-secondary); font-size: 0.85rem;">Contact</a>
-        </div>
-      </div>
-      <div class="col-md-4 text-center text-md-end">
-        <div class="d-flex justify-content-center justify-content-md-end gap-3 mb-2">
-          <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-github"></i></a>
-          <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
-          <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
-        </div>
-        <p class="mb-0" style="font-size: 0.82rem;">© 2026 Alex Morgan. All Rights Reserved.</p>
-      </div>
+  <footer>
+    <div class="container">
+      <p>Designed &amp; Built by <a href="index.html">Alex Morgan</a></p>
+      <p class="mt-1" style="font-size: 0.85rem;">© 2026 All Rights Reserved</p>
     </div>
-  </div>
-</footer>
-
-  <!-- ============================================================
-       MODALS — Full article content
-       ============================================================ -->
-
-  <!-- MODAL: Featured — Why Your REST API is Lying to You -->
-  <div class="modal fade article-modal" id="modalFeatured" tabindex="-1" aria-labelledby="modalFeaturedLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="blog-tag">Backend</span>
-            <h5 class="modal-title mt-2" id="modalFeaturedLabel">Why Your REST API is Lying to You — and How to Fix It</h5>
-          </div>
-          <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="article-meta-bar">
-            <span><i class="fas fa-calendar"></i> 10 June 2026</span>
-            <span><i class="fas fa-clock"></i> 8 min read</span>
-            <span><i class="fas fa-eye"></i> 1.2k views</span>
-            <span><i class="fas fa-user"></i> Alex Morgan</span>
-          </div>
-          <div class="article-content">
-            <p>I've reviewed probably forty APIs built by Nairobi startups over the past two years. Fintech, agritech, healthtech, SaaS. Different industries, different team sizes, different tech stacks. But one mistake appears in nearly all of them, and it's the same mistake: <strong>returning HTTP 200 for operations that failed.</strong></p>
-            <p>Here's what that looks like in practice:</p>
-            <pre><code>HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "status": "error",
-  "message": "User not found"
-}</code></pre>
-            <p>That response is a lie. The HTTP layer is telling the client everything went fine. The JSON body is quietly admitting it didn't. The client developer now has to check two layers every single time — the HTTP status and a custom status field — and they will inevitably forget one of them at 11pm before a deadline.</p>
-            <p>Here are the five most common REST API mistakes I see, and exactly how to fix each one.</p>
-
-            <h3>Mistake 1: Using HTTP 200 for Every Response</h3>
-            <p>HTTP status codes exist for a reason. They are the first signal your client receives, before it even parses the body. Use them correctly and you get error handling for free at the HTTP client level. Ignore them and every consumer of your API has to write custom parsing logic to figure out what actually happened.</p>
-            <p>The fix is straightforward. Map your outcomes to the right codes:</p>
-            <ul>
-              <li><code>200 OK</code> — request succeeded, body contains the result</li>
-              <li><code>201 Created</code> — resource was created, include a <code>Location</code> header pointing to it</li>
-              <li><code>400 Bad Request</code> — client sent invalid data</li>
-              <li><code>401 Unauthorized</code> — not authenticated</li>
-              <li><code>403 Forbidden</code> — authenticated but not permitted</li>
-              <li><code>404 Not Found</code> — resource does not exist</li>
-              <li><code>422 Unprocessable Entity</code> — valid syntax, failed business validation</li>
-              <li><code>500 Internal Server Error</code> — something broke on your side</li>
-            </ul>
-
-            <h3>Mistake 2: Vague Error Messages</h3>
-            <p>The second most common issue: error messages that tell the client nothing useful. <em>"Something went wrong"</em> is not an error message. <em>"An error occurred"</em> is not an error message. These make debugging a nightmare for anyone trying to integrate with your API.</p>
-            <p>A useful error response should include a machine-readable error code, a human-readable message, and — for validation errors — a breakdown of exactly which fields failed and why:</p>
-            <pre><code>{
-  "error": {
-    "code": "VALIDATION_FAILED",
-    "message": "Request validation failed",
-    "details": [
-      { "field": "email", "issue": "Must be a valid email address" },
-      { "field": "phone", "issue": "Must be a Kenyan number starting with +254" }
-    ]
-  }
-}</code></pre>
-            <p>That structure gives every client developer everything they need to surface a meaningful error to the end user — without calling you on Slack at 2am.</p>
-
-            <h3>Mistake 3: Inconsistent Response Shapes</h3>
-            <p>I've seen APIs where <code>GET /users</code> returns an array directly, <code>GET /products</code> returns <code>{"data": []}</code>, and <code>GET /orders</code> returns <code>{"orders": [], "total": 0}</code>. Every endpoint is doing something different. Clients have to handle three different shapes for what is essentially the same operation.</p>
-            <p>Pick one envelope structure and use it everywhere:</p>
-            <pre><code>{
-  "data": { ... },
-  "meta": {
-    "page": 1,
-    "per_page": 20,
-    "total": 154
-  }
-}</code></pre>
-            <div class="callout"><strong>Rule of thumb:</strong> a client developer should be able to look at one endpoint's response and accurately predict the shape of every other endpoint's response. If they can't, your API is inconsistent.</div>
-
-            <h3>Mistake 4: No Versioning Strategy</h3>
-            <p>I've seen startups break their mobile app for thousands of users by deploying a breaking API change with no versioning in place. Once a client is in production — especially a mobile app that users haven't updated — you cannot change the contract your API made with it. Not without a versioning strategy.</p>
-            <p>The simplest approach that actually works in production: version in the URL path from day one. <code>/api/v1/users</code>, <code>/api/v2/users</code>. It's not the most elegant solution, but it's explicit, easy to document, and easy to route at the infrastructure level. Start with v1 even if you think you'll never need v2. You will.</p>
-
-            <h3>Mistake 5: Missing or Incomplete Documentation</h3>
-            <p>Your API is only as good as its documentation. An API with no docs is not a product — it's a puzzle. At minimum, every endpoint needs: the HTTP method and path, what authentication it requires, what the request body or query parameters look like, what a successful response looks like, and what error codes it can return.</p>
-            <p>Use <strong>OpenAPI (Swagger)</strong> and generate the docs from your code. Tools like Postman, Insomnia, and Swagger UI can then render interactive documentation automatically. It takes a few hours to set up and saves weeks of back-and-forth with every developer who integrates with you.</p>
-
-            <hr class="section-divider" />
-            <p>These five fixes won't make your API perfect, but they'll make it honest. And honest APIs are APIs that people actually want to build on. If you're working on an API in Nairobi and want a review, <a href="contact.html" style="color: #6c63ff;">reach out</a> — I do API audits as part of my consulting work.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: Dark Mode Toggle -->
-  <div class="modal fade article-modal" id="modalDarkMode" tabindex="-1" aria-labelledby="modalDarkModeLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="blog-tag">Frontend</span>
-            <h5 class="modal-title mt-2" id="modalDarkModeLabel">Building a Dark Mode Toggle That Actually Works</h5>
-          </div>
-          <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="article-meta-bar">
-            <span><i class="fas fa-calendar"></i> 2 June 2026</span>
-            <span><i class="fas fa-clock"></i> 5 min read</span>
-            <span><i class="fas fa-user"></i> Alex Morgan</span>
-          </div>
-          <div class="article-content">
-            <p>Every portfolio site tutorial ends with "add a dark mode toggle!" and then shows you how to toggle a class on the <code>&lt;body&gt;</code> element. That works for about five seconds — until the user refreshes the page and the site resets to light mode, or navigates to a new page and sees a blinding white flash before the JavaScript kicks in.</p>
-            <p>These are fixable problems. Here's the complete approach I use on every site I build.</p>
-
-            <h3>Step 1: Define your theme with CSS Custom Properties</h3>
-            <p>The foundation is CSS custom properties (variables). Don't hardcode colours anywhere. Every colour value in your stylesheet should reference a variable:</p>
-            <pre><code>:root {
-  --bg-primary: #ffffff;
-  --bg-card: #f8f9fa;
-  --text-primary: #0a0a0a;
-  --text-secondary: #555;
-  --accent: #6c63ff;
-  --border: #e0e0e0;
-}
-
-[data-theme="dark"] {
-  --bg-primary: #0a0a0a;
-  --bg-card: #12121f;
-  --text-primary: #e8e8f0;
-  --text-secondary: #9090a8;
-  --accent: #6c63ff;
-  --border: rgba(255,255,255,0.08);
-}</code></pre>
-            <p>Now switching themes is a single attribute change on the <code>&lt;html&gt;</code> element. No class toggling on individual elements, no JavaScript-driven inline styles. Just <code>document.documentElement.setAttribute('data-theme', 'dark')</code>.</p>
-
-            <h3>Step 2: Persist the preference with localStorage</h3>
-            <p>This is where most tutorials stop short. They show you the toggle but not the persistence. Without this step, every page load resets to the default theme:</p>
-            <pre><code>const toggle = document.getElementById('themeToggle');
-const saved = localStorage.getItem('theme') || 'dark';
-
-// Apply on load
-document.documentElement.setAttribute('data-theme', saved);
-updateIcon(saved);
-
-toggle.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  updateIcon(next);
-});
-
-function updateIcon(theme) {
-  const icon = toggle.querySelector('i');
-  icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}</code></pre>
-
-            <h3>Step 3: Eliminate the flash of wrong theme (FOUT)</h3>
-            <p>This is the bug that most sites never fix. If your theme JavaScript is in an external file loaded at the bottom of <code>&lt;body&gt;</code>, the page renders in its default theme first, then your script runs and switches it. Users see a flash.</p>
-            <p>The fix: put a tiny inline <code>&lt;script&gt;</code> in the <code>&lt;head&gt;</code> — before any CSS — that reads localStorage and sets the attribute immediately, before the browser paints anything:</p>
-            <pre><code>&lt;head&gt;
-  &lt;!-- This MUST be before your stylesheet links --&gt;
-  &lt;script&gt;
-    (function() {
-      const t = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  &lt;/script&gt;
-  &lt;link rel="stylesheet" href="css/style.css" /&gt;
-&lt;/head&gt;</code></pre>
-            <div class="callout"><strong>Why inline?</strong> External scripts are loaded asynchronously or deferred. An inline script in <code>&lt;head&gt;</code> blocks parsing just long enough to set the attribute before the first paint. Keep it small — this is the only time a render-blocking script is the right answer.</div>
-
-            <h3>Step 4: Respect the OS preference on first visit</h3>
-            <p>If a user hasn't visited your site before, you have no localStorage value. Instead of defaulting to light mode, check what their operating system prefers:</p>
-            <pre><code>(function() {
-  const saved = localStorage.getItem('theme');
-  if (saved) {
-    document.documentElement.setAttribute('data-theme', saved);
-  } else {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-  }
-})();</code></pre>
-            <p>New visitors get the theme their OS already chose for them. Returning visitors get their explicit preference. This is how it should work.</p>
-
-            <hr class="section-divider" />
-            <p>The full implementation takes about twenty minutes. The result is a theme toggle that works correctly on first load, persists across pages and sessions, and respects the user's system preference when they visit for the first time. That's what "actually works" looks like.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: Kenya Tech -->
-  <div class="modal fade article-modal" id="modalKenya" tabindex="-1" aria-labelledby="modalKenyaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="blog-tag">Tech in Africa</span>
-            <h5 class="modal-title mt-2" id="modalKenyaLabel">The State of Web Dev in Kenya: What We're Building in 2026</h5>
-          </div>
-          <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="article-meta-bar">
-            <span><i class="fas fa-calendar"></i> 18 May 2026</span>
-            <span><i class="fas fa-clock"></i> 6 min read</span>
-            <span><i class="fas fa-user"></i> Alex Morgan</span>
-          </div>
-          <div class="article-content">
-            <p>Over the past three months I spoke with twenty-three developers working across Nairobi, Mombasa, and Kisumu. I asked them all the same three questions: what are you building, what stack are you using, and where are you stuck? The answers painted a picture of a developer community that is growing fast, solving genuinely hard problems, and hitting a set of very consistent obstacles.</p>
-
-            <h3>What Kenyan developers are building</h3>
-            <p>The two dominant categories are <strong>fintech</strong> and <strong>agritech</strong>, which shouldn't surprise anyone. M-Pesa has been around since 2007 but the ecosystem built on top of it is still expanding. Developers are building payment orchestration layers, merchant dashboards, loan management systems, savings apps, and lending platforms — all deeply integrated with the Safaricom API and, increasingly, with bank APIs via open banking frameworks that are only just arriving.</p>
-            <p>Agritech is the other major category. The problems being solved are genuinely unique: connecting smallholder farmers with buyers and reducing post-harvest loss, building crop disease detection tools that work on 2G connections, creating SMS-based market price services for farmers who don't own smartphones. These are not problems Silicon Valley has solved. Kenyan developers are solving them from scratch.</p>
-
-            <h3>What stacks are being chosen</h3>
-            <p>The most popular stack I encountered was <strong>React on the frontend, Node.js or Django on the backend, and PostgreSQL for the database</strong>. That combination appeared in roughly 60% of the projects I heard about. Java (Spring Boot) is common in larger organisations and financial institutions — mainly because it's what the university curriculum teaches and what the established banks run internally.</p>
-            <p>Mobile is almost exclusively React Native or Flutter, with a strong preference for Flutter among developers who started building in the last two years. The ability to target both Android and iOS from a single codebase matters enormously when budgets are tight.</p>
-            <div class="callout"><strong>Interesting finding:</strong> twelve of the twenty-three developers I spoke to are self-hosting on DigitalOcean or Hetzner rather than AWS or GCP. The reason: cost. AWS in the Nairobi region is significantly more expensive than a DigitalOcean droplet in Frankfurt, and the latency is acceptable enough for most use cases.</div>
-
-            <h3>Where developers are struggling</h3>
-            <p>Three challenges came up in almost every conversation:</p>
-            <ol>
-              <li><strong>Unreliable infrastructure.</strong> Kenyan internet is better than it was five years ago, but power and connectivity outages still affect backend reliability. Several developers mentioned building offline-first features not as a product enhancement but as a survival requirement.</li>
-              <li><strong>Access to senior mentorship.</strong> There are more junior developers entering the market than there are senior engineers available to guide them. Multiple developers mentioned spending weeks stuck on problems that a more experienced engineer could have resolved in an hour.</li>
-              <li><strong>Client education.</strong> Several freelancers described spending as much time explaining why good software takes time and costs money as they spend actually building. Clients often compare software quotes to the price of an off-the-shelf template and don't understand the gap.</li>
-            </ol>
-
-            <h3>What's changing fast</h3>
-            <p>AI tooling is arriving quickly. GitHub Copilot and Claude are both widely used among the developers I spoke to — not as a replacement for understanding fundamentals, but as productivity multipliers for boilerplate-heavy tasks. Several developers mentioned that what used to take an afternoon now takes an hour. The developers who are thriving are the ones who understand their domain deeply enough to verify and direct AI output, rather than blindly accepting it.</p>
-            <p>The Kenyan developer community is also becoming more visible globally. More developers are contributing to open-source projects, speaking at international conferences, and building products that are finding users outside Africa. The talent has always been here. What's changing is the infrastructure — financial, educational, and digital — that allows it to reach its ceiling.</p>
-
-            <hr class="section-divider" />
-            <p>I'll be publishing a deeper breakdown of the fintech stack choices specifically in a follow-up post next month. If you're a Kenyan developer and you'd like to be included in future research, <a href="contact.html" style="color: #6c63ff;">get in touch</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: PostgreSQL Mistakes -->
-  <div class="modal fade article-modal" id="modalPostgres" tabindex="-1" aria-labelledby="modalPostgresLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="blog-tag">Backend</span>
-            <h5 class="modal-title mt-2" id="modalPostgresLabel">5 PostgreSQL Mistakes I Made as a Junior Developer</h5>
-          </div>
-          <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="article-meta-bar">
-            <span><i class="fas fa-calendar"></i> 3 May 2026</span>
-            <span><i class="fas fa-clock"></i> 7 min read</span>
-            <span><i class="fas fa-user"></i> Alex Morgan</span>
-          </div>
-          <div class="article-content">
-            <p>I learned PostgreSQL the hard way: by breaking a live database, once at 6pm on a Friday, and once in front of a client during a demo. Both incidents were entirely my own fault. Here are the five mistakes I made that cost me the most time — and what I do differently now.</p>
-
-            <h3>Mistake 1: Storing JSON blobs instead of proper relational tables</h3>
-            <p>When I started, JSON columns felt like a superpower. Why design a proper schema when I could just dump a JSON object into a <code>jsonb</code> column and call it done? The answer is: because six months later you need to query inside that JSON, and suddenly every query is slow and the SQL is unreadable.</p>
-            <p>PostgreSQL's <code>jsonb</code> type is genuinely useful — for truly dynamic, unstructured data. But I was using it as a lazy substitute for proper table design. If you know the structure of your data, model it relationally. Your future self, running a join instead of a <code>jsonb_extract_path</code>, will thank you.</p>
-
-            <h3>Mistake 2: Ignoring indexes until performance collapsed</h3>
-            <p>For the first few months of a project, queries are fast. The table has a hundred rows. Everything is fine. Then you hit ten thousand rows and suddenly a page that loaded in 80ms is taking four seconds. You look at the query, it looks fine. The problem isn't the query — it's the missing index.</p>
-            <pre><code>-- This query on a table with 500k rows, no index:
-SELECT * FROM transactions WHERE user_id = 1042;
--- Sequential scan: 1.8s
-
--- After adding the index:
-CREATE INDEX idx_transactions_user_id ON transactions(user_id);
--- Index scan: 2ms</code></pre>
-            <p>The rule I follow now: any column you filter by frequently in a <code>WHERE</code> clause, join on, or order by — index it from the start. Use <code>EXPLAIN ANALYZE</code> regularly to check whether your queries are hitting indexes or doing sequential scans.</p>
-
-            <h3>Mistake 3: Writing N+1 queries without realising it</h3>
-            <p>This is the one that got me in production. I was fetching a list of orders and then, for each order, running a separate query to get the customer details. Fifty orders meant fifty-one database round trips. At low volume it was invisible. Under real load, it brought the server down.</p>
-            <pre><code>-- The wrong way (N+1):
-SELECT * FROM orders;
--- Then for each order:
-SELECT * FROM customers WHERE id = order.customer_id;
-
--- The right way (single query with JOIN):
-SELECT o.*, c.name, c.email
-FROM orders o
-JOIN customers c ON c.id = o.customer_id;</code></pre>
-            <p>If you're using an ORM, learn what SQL it's generating. ORMs make N+1 problems very easy to write accidentally. The fix is usually eager loading — fetching related records in the same query rather than lazily loading them one by one.</p>
-
-            <h3>Mistake 4: Not using transactions for multi-step operations</h3>
-            <p>I once wrote a payment flow that did three things: deduct the buyer's balance, add the seller's balance, and create a transaction record. I wrote them as three separate queries. On a day when the server had a brief connectivity issue, the first query succeeded and the second failed. The buyer's money disappeared into the void.</p>
-            <p>Anything that involves multiple writes that must all succeed or all fail together belongs in a transaction:</p>
-            <pre><code>BEGIN;
-  UPDATE accounts SET balance = balance - 500 WHERE id = 1;
-  UPDATE accounts SET balance = balance + 500 WHERE id = 2;
-  INSERT INTO transactions (from_id, to_id, amount) VALUES (1, 2, 500);
-COMMIT;
--- If any step fails, ROLLBACK happens automatically</code></pre>
-
-            <h3>Mistake 5: Skipping database constraints and relying on application logic</h3>
-            <p>My early schema had no foreign keys, no unique constraints, no not-null constraints beyond the obvious. I was enforcing data integrity entirely in my application code. Then a bug created duplicate records. Then a deleted parent record left orphaned children. Then a null slipped into a field that should never be null and caused a crash three weeks later in production.</p>
-            <p>The database is your last line of defence for data integrity. Application bugs happen. Enforce constraints at the database level:</p>
-            <pre><code>CREATE TABLE orders (
-  id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
-  status VARCHAR(20) NOT NULL CHECK (status IN ('pending','paid','cancelled')),
-  amount NUMERIC(10,2) NOT NULL CHECK (amount > 0),
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);</code></pre>
-
-            <hr class="section-divider" />
-            <p>None of these mistakes are unusual for junior developers. What matters is learning them before they cause a production incident — or, if they already have, learning them now so they don't happen again. PostgreSQL is an extraordinarily capable database. Treat it like one from the start.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: CS Degree -->
-  <div class="modal fade article-modal" id="modalDegree" tabindex="-1" aria-labelledby="modalDegreeLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="blog-tag">Career</span>
-            <h5 class="modal-title mt-2" id="modalDegreeLabel">Was My CS Degree Worth It? An Honest Look Three Years In</h5>
-          </div>
-          <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="article-meta-bar">
-            <span><i class="fas fa-calendar"></i> 14 April 2026</span>
-            <span><i class="fas fa-clock"></i> 9 min read</span>
-            <span><i class="fas fa-user"></i> Alex Morgan</span>
-          </div>
-          <div class="article-content">
-            <p>I get asked this question a lot, usually by second or third year students who are staring at a Java assignment and wondering if they could just watch YouTube videos instead. I want to give an honest answer — not a defensive one from someone trying to justify money already spent, and not a cynical one from someone who forgot why fundamentals matter.</p>
-            <p>Here's what I actually think, three years after graduating from Strathmore University with a BSc in Computer Science.</p>
-
-            <h3>What the degree taught me that YouTube never could</h3>
-            <p><strong>How to think about problems systematically.</strong> The most valuable thing a CS curriculum gives you isn't Java or Python or any specific tool — it's a framework for decomposing complex problems. Algorithms and data structures, discrete mathematics, operating systems theory: these weren't directly relevant to my first job, but they changed how I approached every problem I worked on. I think in time complexity. I notice when a data structure is wrong for a use case. I understand what the computer is actually doing, not just what the framework abstracts away.</p>
-            <p><strong>How to read technical literature.</strong> University forced me to engage with academic papers, technical specifications, and documentation at a depth that I would never have chosen voluntarily. Reading an RFC or a database internals paper without falling asleep is a learnable skill, and I learned it because I had no choice. It's paid off many times over.</p>
-            <p><strong>How to work under pressure with teams I didn't choose.</strong> Group projects at Strathmore were frustrating in exactly the ways that real client projects are frustrating. Miscommunication, unequal effort, last-minute changes, impossible deadlines. That frustration was preparation, even if it didn't feel like it at the time.</p>
-
-            <h3>What the degree completely failed to cover</h3>
-            <p>The curriculum when I graduated was almost entirely focused on building things, not shipping things. Here's what I had to learn on my own:</p>
-            <ul>
-              <li><strong>Version control beyond the basics.</strong> I knew what Git was. I did not know how to resolve a merge conflict, rebase a feature branch, write a useful commit message, or review someone else's pull request constructively. These are daily tasks in any professional environment and the degree gave them almost no attention.</li>
-              <li><strong>System design at scale.</strong> How do you design a system that handles a million users? How do you think about caching, message queues, database replication, load balancing? The degree covered theory but almost nothing practical.</li>
-              <li><strong>How to estimate, scope, and communicate about technical work.</strong> The most important skill for any developer working with clients or non-technical stakeholders is the ability to translate technical decisions into business language. I learned this entirely by making expensive mistakes on real projects.</li>
-              <li><strong>The business side of software.</strong> I graduated with no understanding of SaaS pricing, API economics, cloud cost management, or how technical decisions compound into financial outcomes. This matters more than most developers admit.</li>
-            </ul>
-
-            <h3>The honest verdict</h3>
-            <p>The degree was worth it — for me, in the specific way I used it. The theoretical foundation gave me an advantage that I can feel when debugging a complex system problem or architecting something from scratch. The network from Strathmore has sent me real work. The credential opened doors that would have required years of portfolio-building to open otherwise in the Kenyan market.</p>
-            <p>But the degree alone would not have been enough. The developers I know who are thriving — regardless of whether they have a degree — are the ones who treated formal education as a starting point, not a destination. They built things outside class. They took on freelance work while studying. They read beyond the curriculum. They shipped things and broke things and fixed things.</p>
-            <div class="callout"><strong>My actual recommendation</strong> for anyone asking me whether to do a CS degree in Kenya in 2026: yes, if you treat it as a foundation and spend the four years also building a portfolio. No, if you think the certificate alone will get you where you want to go. The market is too competitive for that now, and it will only get more so.</div>
-
-            <hr class="section-divider" />
-            <p>If you're a current student at Strathmore or any other Kenyan university and want to talk through your options, I'm always open to a conversation. Find me on <a href="contact.html" style="color: #6c63ff;">the contact page</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- END MODALS -->
-
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
