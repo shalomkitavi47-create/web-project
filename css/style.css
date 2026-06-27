@@ -257,3 +257,13 @@ html {
 .back-to-top.show {
   display: flex;
 }
+
+/* ===== FOCUS STYLES FOR ACCESSIBILITY ===== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
